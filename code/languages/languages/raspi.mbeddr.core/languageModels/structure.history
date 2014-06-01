@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history>
+  <StructureModification>
+    <dependencies>
+      <model index="u7yu" modelUID="r:ea26c098-7b85-4848-bbf0-1de747bbf9e1(raspi.mbeddr.core.structure)" version="-1" />
+    </dependencies>
+    <rename id="u7yu.8812313417924468621" type="CONCEPT" from="GPIOConfigItem" to="GPIO" />
+  </StructureModification>
+</history>
+
