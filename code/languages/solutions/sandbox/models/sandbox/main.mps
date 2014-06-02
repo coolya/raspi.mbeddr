@@ -2,6 +2,7 @@
 <model modelUID="r:159afddd-45a8-4348-bb2f-ead2e4f69761(sandbox.main)">
   <persistence version="8" />
   <language namespace="5db9a15e-26c4-4c1d-b417-73ac9a64ae54(raspi.mbeddr.core)" />
+  <language namespace="aa7a5f12-2bf0-4efb-ae1d-84ca8cc5a27f(com.mbeddr.mqtt)" />
   <devkit namespace="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
   <import index="51wr" modelUID="r:b31f1c3c-99aa-4f1e-a329-cba27efb1a6b(com.mbeddr.core.buildconfig.structure)" version="1" implicit="yes" />
   <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
@@ -11,6 +12,7 @@
   <import index="u7yu" modelUID="r:ea26c098-7b85-4848-bbf0-1de747bbf9e1(raspi.mbeddr.core.structure)" version="0" implicit="yes" />
   <import index="yq40" modelUID="r:152b3fc0-83a1-4bab-a8cd-565eb8483785(com.mbeddr.core.pointers.structure)" version="4" implicit="yes" />
   <import index="c4fa" modelUID="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" version="7" implicit="yes" />
+  <import index="k146" modelUID="r:5209fc71-bade-45c9-9079-f2d474f0d6ca(com.mbeddr.core.util.structure)" version="21" implicit="yes" />
   <root type="x27k.ImplementationModule" typeId="x27k.6437088627575722830" id="8812313417924506292" nodeInfo="ng">
     <property name="name" nameId="tpck.1169194664001" value="Main" />
     <node role="contents" roleId="x27k.6437088627575722833" type="u7yu.GPIO" typeId="u7yu.8812313417924468621" id="8812313417926107629" nodeInfo="ng">
@@ -28,47 +30,73 @@
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="8812313417926107304" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="empty_1401640979901_1" />
     </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="7417653152610618683" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="empty_1401715650052_2" />
+    </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="k146.MessageDefinitionTable" typeId="k146.2688792604367903085" id="9184852625660319741" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="Debug" />
+      <node role="messages" roleId="k146.2688792604367903095" type="k146.MessageDefinition" typeId="k146.2688792604367903087" id="9184852625660320029" nodeInfo="ng">
+        <property name="active" nameId="k146.2688792604367947988" value="true" />
+        <property name="name" nameId="tpck.1169194664001" value="settingHigh" />
+        <property name="text" nameId="k146.2688792604367903089" value="Setting GPIO to high" />
+        <property name="kind" nameId="k146.2688792604367903094" value="1" />
+      </node>
+      <node role="messages" roleId="k146.2688792604367903095" type="k146.MessageDefinition" typeId="k146.2688792604367903087" id="9184852625660320037" nodeInfo="ng">
+        <property name="active" nameId="k146.2688792604367947988" value="true" />
+        <property name="kind" nameId="k146.2688792604367903094" value="1" />
+        <property name="name" nameId="tpck.1169194664001" value="seetingLow" />
+        <property name="text" nameId="k146.2688792604367903089" value="Setting GPIO to low" />
+      </node>
+    </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="1016980152740327323" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="empty_1401717852745_3" />
+    </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="828383372956008678" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="empty_1401701342938_1" />
+    </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.Function" typeId="x27k.6437088627575724001" id="8812313417925391454" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="main" />
       <property name="exported" nameId="x27k.1317894735999272944" value="true" />
       <node role="body" roleId="x27k.4185783222026475860" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="8812313417925391456" nodeInfo="ng">
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.LocalVariableDeclaration" typeId="c4fa.4185783222026475238" id="8812313417926834103" nodeInfo="ng">
-          <property name="name" nameId="tpck.1169194664001" value="dummy" />
-          <node role="type" roleId="mj1l.318113533128716676" type="u7yu.GPIOType" typeId="u7yu.8812313417925436872" id="8812313417926834101" nodeInfo="ng">
-            <property name="volatile" nameId="mj1l.2941277002448691247" value="false" />
-            <property name="const" nameId="mj1l.2941277002445651368" value="false" />
-          </node>
-          <node role="init" roleId="c4fa.4185783222026502647" type="u7yu.GPIORefExpression" typeId="u7yu.8812313417925236404" id="8812313417926835141" nodeInfo="ng">
-            <link role="gpio" roleId="u7yu.8812313417925236405" targetNodeId="8812313417926107629" resolveInfo="door" />
-          </node>
-        </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="8812313417926835353" nodeInfo="ng" />
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="8812313417926835769" nodeInfo="ng">
-          <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.EqualsExpression" typeId="mj1l.8860443239512129322" id="8812313417926835987" nodeInfo="ng">
-            <node role="right" roleId="mj1l.8860443239512128065" type="u7yu.HighLiteral" typeId="u7yu.8812313417925436998" id="8812313417926836252" nodeInfo="ng" />
-            <node role="left" roleId="mj1l.8860443239512128064" type="c4fa.LocalVarRef" typeId="c4fa.2093108837558113914" id="8812313417926835768" nodeInfo="ng">
-              <link role="var" roleId="c4fa.2093108837558124071" targetNodeId="8812313417926834103" resolveInfo="dummy" />
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="1016980152739843323" nodeInfo="ng" />
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="1016980152739843067" nodeInfo="ng" />
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.WhileStatement" typeId="c4fa.8441331188640771826" id="9184852625659452734" nodeInfo="ng">
+          <node role="body" roleId="c4fa.8441331188640771828" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="9184852625659452735" nodeInfo="ng">
+            <node role="statements" roleId="c4fa.4185783222026475862" type="k146.ReportStatement" typeId="k146.2688792604367964821" id="9184852625660320196" nodeInfo="ng">
+              <node role="msgref" roleId="k146.2688792604367973273" type="k146.MessageRef" typeId="k146.2688792604367964823" id="9184852625660320198" nodeInfo="ng">
+                <link role="table" roleId="k146.2688792604367964824" targetNodeId="9184852625660319741" resolveInfo="Debug" />
+                <link role="msg" roleId="k146.2688792604367964825" targetNodeId="9184852625660320029" resolveInfo="settingHigh" />
+              </node>
+            </node>
+            <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="9184852625659453209" nodeInfo="ng">
+              <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.AssignmentExpr" typeId="mj1l.22102029902365709" id="9184852625659453767" nodeInfo="ng">
+                <node role="right" roleId="mj1l.8860443239512128065" type="u7yu.HighLiteral" typeId="u7yu.8812313417925436998" id="9184852625659454020" nodeInfo="ng" />
+                <node role="left" roleId="mj1l.8860443239512128064" type="u7yu.GPIORefExpression" typeId="u7yu.8812313417925236404" id="9184852625659453208" nodeInfo="ng">
+                  <link role="gpio" roleId="u7yu.8812313417925236405" targetNodeId="8812313417926107631" resolveInfo="blinker" />
+                </node>
+              </node>
+            </node>
+            <node role="statements" roleId="c4fa.4185783222026475862" type="u7yu.SleepStatement" typeId="u7yu.8812313417925536026" id="9184852625659454283" nodeInfo="ng">
+              <property name="millis" nameId="u7yu.8812313417925538872" value="500" />
+            </node>
+            <node role="statements" roleId="c4fa.4185783222026475862" type="k146.ReportStatement" typeId="k146.2688792604367964821" id="9184852625660320247" nodeInfo="ng">
+              <node role="msgref" roleId="k146.2688792604367973273" type="k146.MessageRef" typeId="k146.2688792604367964823" id="9184852625660320249" nodeInfo="ng">
+                <link role="table" roleId="k146.2688792604367964824" targetNodeId="9184852625660319741" resolveInfo="Debug" />
+                <link role="msg" roleId="k146.2688792604367964825" targetNodeId="9184852625660320037" resolveInfo="seetingLow" />
+              </node>
+            </node>
+            <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="9184852625659454309" nodeInfo="ng">
+              <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.AssignmentExpr" typeId="mj1l.22102029902365709" id="9184852625659454333" nodeInfo="ng">
+                <node role="right" roleId="mj1l.8860443239512128065" type="u7yu.LowLiteral" typeId="u7yu.8812313417925532823" id="9184852625659454608" nodeInfo="ng" />
+                <node role="left" roleId="mj1l.8860443239512128064" type="u7yu.GPIORefExpression" typeId="u7yu.8812313417925236404" id="9184852625659454308" nodeInfo="ng">
+                  <link role="gpio" roleId="u7yu.8812313417925236405" targetNodeId="8812313417926107631" resolveInfo="blinker" />
+                </node>
+              </node>
             </node>
           </node>
+          <node role="condition" roleId="c4fa.8441331188640771827" type="mj1l.TrueLiteral" typeId="mj1l.8860443239512128094" id="9184852625659452972" nodeInfo="ng" />
         </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="8812313417926421440" nodeInfo="ng">
-          <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.EqualsExpression" typeId="mj1l.8860443239512129322" id="8812313417926423316" nodeInfo="ng">
-            <node role="left" roleId="mj1l.8860443239512128064" type="u7yu.GPIORefExpression" typeId="u7yu.8812313417925236404" id="8812313417926423318" nodeInfo="ng">
-              <link role="gpio" roleId="u7yu.8812313417925236405" targetNodeId="8812313417926107629" resolveInfo="door" />
-            </node>
-            <node role="right" roleId="mj1l.8860443239512128065" type="u7yu.HighLiteral" typeId="u7yu.8812313417925436998" id="8812313417926423319" nodeInfo="ng" />
-          </node>
-        </node>
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="8812313417926422347" nodeInfo="ng">
-          <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.AssignmentExpr" typeId="mj1l.22102029902365709" id="8812313417926422579" nodeInfo="ng">
-            <node role="right" roleId="mj1l.8860443239512128065" type="u7yu.GPIORefExpression" typeId="u7yu.8812313417925236404" id="8812313417927001474" nodeInfo="ng">
-              <link role="gpio" roleId="u7yu.8812313417925236405" targetNodeId="8812313417926107629" resolveInfo="door" />
-            </node>
-            <node role="left" roleId="mj1l.8860443239512128064" type="u7yu.GPIORefExpression" typeId="u7yu.8812313417925236404" id="8812313417926422346" nodeInfo="ng">
-              <link role="gpio" roleId="u7yu.8812313417925236405" targetNodeId="8812313417926107631" resolveInfo="blinker" />
-            </node>
-          </node>
-        </node>
+        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="9184852625659452286" nodeInfo="ng" />
         <node role="statements" roleId="c4fa.4185783222026475862" type="x27k.ReturnStatement" typeId="x27k.8967919205527146149" id="8812313417925391464" nodeInfo="ng">
           <node role="expression" roleId="x27k.8967919205527146150" type="mj1l.NumberLiteral" typeId="mj1l.8860443239512128103" id="8812313417925391465" nodeInfo="ng">
             <property name="unsigned" nameId="mj1l.5192961572790190887" value="false" />
@@ -98,6 +126,9 @@
           </node>
         </node>
       </node>
+    </node>
+    <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="1016980152739841532" nodeInfo="ng">
+      <property name="name" nameId="tpck.1169194664001" value="empty_1401717502042_1" />
     </node>
   </root>
   <root type="mj1l.TypeSizeConfiguration" typeId="mj1l.3335993110369795380" id="8812313417924509204" nodeInfo="ng">
@@ -275,7 +306,10 @@
   </root>
   <root type="51wr.BuildConfiguration" typeId="51wr.7717755763392524104" id="8812313417924509299" nodeInfo="ng">
     <node role="configurationItems" roleId="vs0r.4459718605982007338" type="u7yu.GPIOConfiguration" typeId="u7yu.8812313417924136848" id="8812313417926548095" nodeInfo="ng">
-      <node role="generator" roleId="u7yu.8812313417924468615" type="u7yu.RapsberryPiGenerator" typeId="u7yu.8812313417924504464" id="8812313417926997703" nodeInfo="ng" />
+      <node role="generator" roleId="u7yu.8812313417924468615" type="u7yu.EmulationGenerator" typeId="u7yu.8812313417924504465" id="9184852625660155296" nodeInfo="ng" />
+    </node>
+    <node role="configurationItems" roleId="vs0r.4459718605982007338" type="k146.ReportingConfiguration" typeId="k146.4459718605982051949" id="9184852625660319181" nodeInfo="ng">
+      <node role="strategy" roleId="k146.4459718605982051999" type="k146.PrintfReportingStrategy" typeId="k146.4459718605982051980" id="9184852625660319182" nodeInfo="ng" />
     </node>
     <node role="target" roleId="51wr.5323740605968447026" type="51wr.DesktopPlatform" typeId="51wr.5323740605968447022" id="8812313417926581512" nodeInfo="ng">
       <property name="compiler" nameId="51wr.5323740605968447024" value="gcc" />

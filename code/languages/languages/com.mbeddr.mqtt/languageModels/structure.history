@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<history>
+  <StructureModification>
+    <dependencies>
+      <model index="w8fu" modelUID="r:c2843554-dcf1-4e98-8893-c87d5833350b(com.mbeddr.mqtt.structure)" version="-1" />
+    </dependencies>
+    <rename id="w8fu.1016980152741811417" type="REFERENCE" from="Container" to="container" />
+  </StructureModification>
+</history>
+

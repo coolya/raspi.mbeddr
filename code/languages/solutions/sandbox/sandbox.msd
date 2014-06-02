@@ -7,6 +7,7 @@
   </models>
   <sourcePath />
   <usedLanguages>
+    <usedLanguage>aa7a5f12-2bf0-4efb-ae1d-84ca8cc5a27f(com.mbeddr.mqtt)</usedLanguage>
     <usedLanguage>5db9a15e-26c4-4c1d-b417-73ac9a64ae54(raspi.mbeddr.core)</usedLanguage>
   </usedLanguages>
   <usedDevKits>
