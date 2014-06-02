@@ -2,12 +2,6 @@
 <history>
   <StructureModification>
     <dependencies>
-      <model index="u7yu" modelUID="r:ea26c098-7b85-4848-bbf0-1de747bbf9e1(raspi.mbeddr.core.structure)" version="-1" />
-    </dependencies>
-    <rename id="u7yu.8812313417924468621" type="CONCEPT" from="GPIOConfigItem" to="GPIO" />
-  </StructureModification>
-  <StructureModification>
-    <dependencies>
       <model index="i8z5" modelUID="r:a06c571b-7200-44c3-9d33-01c0460368e9(raspi.mbeddr.core.behavior)" version="-1" />
       <model index="u7yu" modelUID="r:ea26c098-7b85-4848-bbf0-1de747bbf9e1(raspi.mbeddr.core.structure)" version="0" />
       <model index="huc8" modelUID="r:66777aef-e068-4203-9e78-d8cbdfc840ff(raspi.mbeddr.core.editor)" version="-1" />
