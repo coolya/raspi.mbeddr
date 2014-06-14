@@ -59,7 +59,6 @@
       <property name="exported" nameId="x27k.1317894735999272944" value="true" />
       <node role="body" roleId="x27k.4185783222026475860" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="8812313417925391456" nodeInfo="ng">
         <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="1016980152739843323" nodeInfo="ng" />
-        <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="1016980152739843067" nodeInfo="ng" />
         <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.WhileStatement" typeId="c4fa.8441331188640771826" id="9184852625659452734" nodeInfo="ng">
           <node role="body" roleId="c4fa.8441331188640771828" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="9184852625659452735" nodeInfo="ng">
             <node role="statements" roleId="c4fa.4185783222026475862" type="k146.ReportStatement" typeId="k146.2688792604367964821" id="9184852625660320196" nodeInfo="ng">
@@ -306,7 +305,7 @@
   </root>
   <root type="51wr.BuildConfiguration" typeId="51wr.7717755763392524104" id="8812313417924509299" nodeInfo="ng">
     <node role="configurationItems" roleId="vs0r.4459718605982007338" type="u7yu.GPIOConfiguration" typeId="u7yu.8812313417924136848" id="8812313417926548095" nodeInfo="ng">
-      <node role="generator" roleId="u7yu.8812313417924468615" type="u7yu.EmulationGenerator" typeId="u7yu.8812313417924504465" id="9184852625660155296" nodeInfo="ng" />
+      <node role="generator" roleId="u7yu.8812313417924468615" type="u7yu.RapsberryPiGenerator" typeId="u7yu.8812313417924504464" id="8736428059941107718" nodeInfo="ng" />
     </node>
     <node role="configurationItems" roleId="vs0r.4459718605982007338" type="k146.ReportingConfiguration" typeId="k146.4459718605982051949" id="9184852625660319181" nodeInfo="ng">
       <node role="strategy" roleId="k146.4459718605982051999" type="k146.PrintfReportingStrategy" typeId="k146.4459718605982051980" id="9184852625660319182" nodeInfo="ng" />
