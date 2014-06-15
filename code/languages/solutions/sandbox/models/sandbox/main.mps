@@ -33,21 +33,6 @@
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="7417653152610618683" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="empty_1401715650052_2" />
     </node>
-    <node role="contents" roleId="x27k.6437088627575722833" type="k146.MessageDefinitionTable" typeId="k146.2688792604367903085" id="9184852625660319741" nodeInfo="ng">
-      <property name="name" nameId="tpck.1169194664001" value="Debug" />
-      <node role="messages" roleId="k146.2688792604367903095" type="k146.MessageDefinition" typeId="k146.2688792604367903087" id="9184852625660320029" nodeInfo="ng">
-        <property name="active" nameId="k146.2688792604367947988" value="true" />
-        <property name="name" nameId="tpck.1169194664001" value="settingHigh" />
-        <property name="text" nameId="k146.2688792604367903089" value="Setting GPIO to high" />
-        <property name="kind" nameId="k146.2688792604367903094" value="1" />
-      </node>
-      <node role="messages" roleId="k146.2688792604367903095" type="k146.MessageDefinition" typeId="k146.2688792604367903087" id="9184852625660320037" nodeInfo="ng">
-        <property name="active" nameId="k146.2688792604367947988" value="true" />
-        <property name="kind" nameId="k146.2688792604367903094" value="1" />
-        <property name="name" nameId="tpck.1169194664001" value="seetingLow" />
-        <property name="text" nameId="k146.2688792604367903089" value="Setting GPIO to low" />
-      </node>
-    </node>
     <node role="contents" roleId="x27k.6437088627575722833" type="x27k.EmptyModuleContent" typeId="x27k.8934095934011938595" id="1016980152740327323" nodeInfo="ng">
       <property name="name" nameId="tpck.1169194664001" value="empty_1401717852745_3" />
     </node>
@@ -61,12 +46,6 @@
         <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.Statement" typeId="c4fa.4185783222026464515" id="1016980152739843323" nodeInfo="ng" />
         <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.WhileStatement" typeId="c4fa.8441331188640771826" id="9184852625659452734" nodeInfo="ng">
           <node role="body" roleId="c4fa.8441331188640771828" type="c4fa.StatementList" typeId="c4fa.4185783222026475861" id="9184852625659452735" nodeInfo="ng">
-            <node role="statements" roleId="c4fa.4185783222026475862" type="k146.ReportStatement" typeId="k146.2688792604367964821" id="9184852625660320196" nodeInfo="ng">
-              <node role="msgref" roleId="k146.2688792604367973273" type="k146.MessageRef" typeId="k146.2688792604367964823" id="9184852625660320198" nodeInfo="ng">
-                <link role="table" roleId="k146.2688792604367964824" targetNodeId="9184852625660319741" resolveInfo="Debug" />
-                <link role="msg" roleId="k146.2688792604367964825" targetNodeId="9184852625660320029" resolveInfo="settingHigh" />
-              </node>
-            </node>
             <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="9184852625659453209" nodeInfo="ng">
               <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.AssignmentExpr" typeId="mj1l.22102029902365709" id="9184852625659453767" nodeInfo="ng">
                 <node role="right" roleId="mj1l.8860443239512128065" type="u7yu.HighLiteral" typeId="u7yu.8812313417925436998" id="9184852625659454020" nodeInfo="ng" />
@@ -77,12 +56,6 @@
             </node>
             <node role="statements" roleId="c4fa.4185783222026475862" type="u7yu.SleepStatement" typeId="u7yu.8812313417925536026" id="9184852625659454283" nodeInfo="ng">
               <property name="millis" nameId="u7yu.8812313417925538872" value="500" />
-            </node>
-            <node role="statements" roleId="c4fa.4185783222026475862" type="k146.ReportStatement" typeId="k146.2688792604367964821" id="9184852625660320247" nodeInfo="ng">
-              <node role="msgref" roleId="k146.2688792604367973273" type="k146.MessageRef" typeId="k146.2688792604367964823" id="9184852625660320249" nodeInfo="ng">
-                <link role="table" roleId="k146.2688792604367964824" targetNodeId="9184852625660319741" resolveInfo="Debug" />
-                <link role="msg" roleId="k146.2688792604367964825" targetNodeId="9184852625660320037" resolveInfo="seetingLow" />
-              </node>
             </node>
             <node role="statements" roleId="c4fa.4185783222026475862" type="c4fa.ExpressionStatement" typeId="c4fa.7254843406768833938" id="9184852625659454309" nodeInfo="ng">
               <node role="expr" roleId="c4fa.7254843406768833939" type="mj1l.AssignmentExpr" typeId="mj1l.22102029902365709" id="9184852625659454333" nodeInfo="ng">
@@ -305,7 +278,9 @@
   </root>
   <root type="51wr.BuildConfiguration" typeId="51wr.7717755763392524104" id="8812313417924509299" nodeInfo="ng">
     <node role="configurationItems" roleId="vs0r.4459718605982007338" type="u7yu.GPIOConfiguration" typeId="u7yu.8812313417924136848" id="8812313417926548095" nodeInfo="ng">
-      <node role="generator" roleId="u7yu.8812313417924468615" type="u7yu.RapsberryPiGenerator" typeId="u7yu.8812313417924504464" id="8736428059941107718" nodeInfo="ng" />
+      <node role="generator" roleId="u7yu.8812313417924468615" type="u7yu.EmulationGenerator" typeId="u7yu.8812313417924504465" id="8820081485783043152" nodeInfo="ng">
+        <property name="printChanges" nameId="u7yu.8820081485781645947" value="true" />
+      </node>
     </node>
     <node role="configurationItems" roleId="vs0r.4459718605982007338" type="k146.ReportingConfiguration" typeId="k146.4459718605982051949" id="9184852625660319181" nodeInfo="ng">
       <node role="strategy" roleId="k146.4459718605982051999" type="k146.PrintfReportingStrategy" typeId="k146.4459718605982051980" id="9184852625660319182" nodeInfo="ng" />

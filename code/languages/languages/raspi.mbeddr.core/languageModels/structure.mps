@@ -74,6 +74,10 @@
     <property name="conceptAlias" nameId="tpce.5092175715804935370" value="emulated" />
     <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
     <link role="extends" roleId="tpce.1071489389519" targetNodeId="8812313417924468614" resolveInfo="GPIOGeneratorOption" />
+    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="8820081485781645947" nodeInfo="ig">
+      <property name="name" nameId="tpck.1169194664001" value="printChanges" />
+      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983657063" resolveInfo="boolean" />
+    </node>
   </root>
   <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417924906441" nodeInfo="ig">
     <property name="name" nameId="tpck.1169194664001" value="NoneFunction" />
