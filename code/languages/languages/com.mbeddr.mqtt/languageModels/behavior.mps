@@ -109,6 +109,19 @@
             </node>
           </node>
         </node>
+        <node role="statement" roleId="tpee.1068581517665" type="tpee.ExpressionStatement" typeId="tpee.1068580123155" id="7368696311827365105" nodeInfo="nn">
+          <node role="expression" roleId="tpee.1068580123156" type="tpee.AssignmentExpression" typeId="tpee.1068498886294" id="7368696311827460059" nodeInfo="nn">
+            <node role="rValue" roleId="tpee.1068498886297" type="tpee.StringLiteral" typeId="tpee.1070475926800" id="7368696311827460091" nodeInfo="nn">
+              <property name="value" nameId="tpee.1070475926801" value="tcp://localhost:1883" />
+            </node>
+            <node role="lValue" roleId="tpee.1068498886295" type="tpee.DotExpression" typeId="tpee.1197027756228" id="7368696311827365402" nodeInfo="nn">
+              <node role="operand" roleId="tpee.1197027771414" type="1i04.ThisNodeExpression" typeId="1i04.1225194691553" id="7368696311827365103" nodeInfo="nn" />
+              <node role="operation" roleId="tpee.1197027833540" type="tp25.SPropertyAccess" typeId="tp25.1138056022639" id="7368696311827458104" nodeInfo="nn">
+                <link role="property" roleId="tp25.1138056395725" targetNodeId="w8fu.1016980152741811406" resolveInfo="address" />
+              </node>
+            </node>
+          </node>
+        </node>
       </node>
     </node>
   </root>
