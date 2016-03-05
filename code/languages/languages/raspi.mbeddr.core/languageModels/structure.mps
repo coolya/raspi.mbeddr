@@ -1,150 +1,204 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<model modelUID="r:ea26c098-7b85-4848-bbf0-1de747bbf9e1(com.mbeddr.raspi.structure)" version="1">
-  <persistence version="8" />
-  <language namespace="c72da2b9-7cce-4447-8389-f407dc1158b7(jetbrains.mps.lang.structure)" />
-  <devkit namespace="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
-  <import index="vs0r" modelUID="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" version="25" />
-  <import index="x27k" modelUID="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" version="9" />
-  <import index="51wr" modelUID="r:b31f1c3c-99aa-4f1e-a329-cba27efb1a6b(com.mbeddr.core.buildconfig.structure)" version="1" />
-  <import index="mj1l" modelUID="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" version="30" />
-  <import index="c4fa" modelUID="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" version="7" />
-  <import index="tpce" modelUID="r:00000000-0000-4000-0000-011c89590292(jetbrains.mps.lang.structure.structure)" version="0" implicit="yes" />
-  <import index="tpck" modelUID="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" version="0" implicit="yes" />
-  <import index="u7yu" modelUID="r:ea26c098-7b85-4848-bbf0-1de747bbf9e1(com.mbeddr.raspi.structure)" version="1" implicit="yes" />
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417924136848" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="GPIOConfiguration" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="gpio" />
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="tpck.1133920641626" resolveInfo="BaseConcept" />
-    <node role="linkDeclaration" roleId="tpce.1071489727083" type="tpce.LinkDeclaration" typeId="tpce.1071489288298" id="8812313417924468615" nodeInfo="ig">
-      <property name="metaClass" nameId="tpce.1071599937831" value="aggregation" />
-      <property name="role" nameId="tpce.1071599776563" value="generator" />
-      <property name="sourceCardinality" nameId="tpce.1071599893252" value="1" />
-      <link role="target" roleId="tpce.1071599976176" targetNodeId="8812313417924468614" resolveInfo="GPIOGeneratorOption" />
+<model ref="r:ea26c098-7b85-4848-bbf0-1de747bbf9e1(com.mbeddr.raspi.structure)">
+  <persistence version="9" />
+  <attribute name="version" value="1" />
+  <languages>
+    <use id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure" version="1" />
+    <devkit ref="fbc25dd2-5da4-483a-8b19-70928e1b62d7(jetbrains.mps.devkit.general-purpose)" />
+  </languages>
+  <imports>
+    <import index="vs0r" ref="r:f7764ca4-8c75-4049-922b-08516400a727(com.mbeddr.core.base.structure)" />
+    <import index="x27k" ref="r:75ecab8a-8931-4140-afc6-4b46398710fc(com.mbeddr.core.modules.structure)" />
+    <import index="51wr" ref="r:b31f1c3c-99aa-4f1e-a329-cba27efb1a6b(com.mbeddr.core.buildconfig.structure)" />
+    <import index="mj1l" ref="r:c371cf98-dcc8-4a43-8eb8-8a8096de18b2(com.mbeddr.core.expressions.structure)" />
+    <import index="c4fa" ref="r:9f0e84b6-2ec7-4f9e-83e0-feedc77b63a3(com.mbeddr.core.statements.structure)" />
+    <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+  </imports>
+  <registry>
+    <language id="c72da2b9-7cce-4447-8389-f407dc1158b7" name="jetbrains.mps.lang.structure">
+      <concept id="1169125787135" name="jetbrains.mps.lang.structure.structure.AbstractConceptDeclaration" flags="ig" index="PkWjJ">
+        <property id="4628067390765956802" name="abstract" index="R5$K7" />
+        <property id="5092175715804935370" name="conceptAlias" index="34LRSv" />
+        <property id="1587916991969465369" name="conceptId" index="1pbfSe" />
+        <child id="1071489727083" name="linkDeclaration" index="1TKVEi" />
+        <child id="1071489727084" name="propertyDeclaration" index="1TKVEl" />
+      </concept>
+      <concept id="1169127622168" name="jetbrains.mps.lang.structure.structure.InterfaceConceptReference" flags="ig" index="PrWs8">
+        <reference id="1169127628841" name="intfc" index="PrY4T" />
+      </concept>
+      <concept id="1071489090640" name="jetbrains.mps.lang.structure.structure.ConceptDeclaration" flags="ig" index="1TIwiD">
+        <reference id="1071489389519" name="extends" index="1TJDcQ" />
+        <child id="1169129564478" name="implements" index="PzmwI" />
+      </concept>
+      <concept id="1071489288299" name="jetbrains.mps.lang.structure.structure.PropertyDeclaration" flags="ig" index="1TJgyi">
+        <reference id="1082985295845" name="dataType" index="AX2Wp" />
+      </concept>
+      <concept id="1071489288298" name="jetbrains.mps.lang.structure.structure.LinkDeclaration" flags="ig" index="1TJgyj">
+        <property id="1071599776563" name="role" index="20kJfa" />
+        <property id="1071599893252" name="sourceCardinality" index="20lbJX" />
+        <property id="1071599937831" name="metaClass" index="20lmBu" />
+        <reference id="1071599976176" name="target" index="20lvS9" />
+      </concept>
+    </language>
+    <language id="ceab5195-25ea-4f22-9b92-103b95ca8c0c" name="jetbrains.mps.lang.core">
+      <concept id="1133920641626" name="jetbrains.mps.lang.core.structure.BaseConcept" flags="ng" index="2VYdi">
+        <property id="1193676396447" name="virtualPackage" index="3GE5qa" />
+      </concept>
+      <concept id="1169194658468" name="jetbrains.mps.lang.core.structure.INamedConcept" flags="ng" index="TrEIO">
+        <property id="1169194664001" name="name" index="TrG5h" />
+      </concept>
+    </language>
+  </registry>
+  <node concept="1TIwiD" id="7DbC5OGLGYg">
+    <property role="TrG5h" value="GPIOConfiguration" />
+    <property role="34LRSv" value="gpio" />
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="1pbfSe" value="1491963923" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="7DbC5OGMXY7" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="generator" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7DbC5OGMXY6" resolve="GPIOGeneratorOption" />
     </node>
-    <node role="implements" roleId="tpce.1169129564478" type="tpce.InterfaceConceptReference" typeId="tpce.1169127622168" id="8812313417924437116" nodeInfo="ig">
-      <link role="intfc" roleId="tpce.1169127628841" targetNodeId="vs0r.4459718605982007336" resolveInfo="IConfigurationItem" />
+    <node concept="PrWs8" id="7DbC5OGMQhW" role="PzmwI">
+      <ref role="PrY4T" to="vs0r:3R$6B6bKw0C" resolve="IConfigurationItem" />
     </node>
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417924468614" nodeInfo="ig">
-    <property name="abstract" nameId="tpce.4628067390765956802" value="true" />
-    <property name="name" nameId="tpck.1169194664001" value="GPIOGeneratorOption" />
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="tpck.1133920641626" resolveInfo="BaseConcept" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417924468621" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="GPIO" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="gpio" />
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="tpck.1133920641626" resolveInfo="BaseConcept" />
-    <node role="linkDeclaration" roleId="tpce.1071489727083" type="tpce.LinkDeclaration" typeId="tpce.1071489288298" id="8812313417924472802" nodeInfo="ig">
-      <property name="metaClass" nameId="tpce.1071599937831" value="aggregation" />
-      <property name="role" nameId="tpce.1071599776563" value="function" />
-      <property name="sourceCardinality" nameId="tpce.1071599893252" value="1" />
-      <link role="target" roleId="tpce.1071599976176" targetNodeId="8812313417924468642" resolveInfo="GPIOFunction" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGMXY6">
+    <property role="R5$K7" value="true" />
+    <property role="TrG5h" value="GPIOGeneratorOption" />
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="1pbfSe" value="1491632157" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGMXYd">
+    <property role="TrG5h" value="GPIO" />
+    <property role="34LRSv" value="gpio" />
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="1pbfSe" value="1491632150" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+    <node concept="1TJgyj" id="7DbC5OGMYZy" role="1TKVEi">
+      <property role="20lmBu" value="aggregation" />
+      <property role="20kJfa" value="function" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7DbC5OGMXYy" resolve="GPIOFunction" />
     </node>
-    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="8812313417924468626" nodeInfo="ig">
-      <property name="name" nameId="tpck.1169194664001" value="pinName" />
-      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983041843" resolveInfo="string" />
+    <node concept="1TJgyi" id="7DbC5OGMXYi" role="1TKVEl">
+      <property role="TrG5h" value="pinName" />
+      <ref role="AX2Wp" to="tpck:fKAOsGN" resolve="string" />
     </node>
-    <node role="implements" roleId="tpce.1169129564478" type="tpce.InterfaceConceptReference" typeId="tpce.1169127622168" id="8812313417925089401" nodeInfo="ig">
-      <link role="intfc" roleId="tpce.1169127628841" targetNodeId="vs0r.7024921229555594291" resolveInfo="IIdentifierNamedConcept" />
+    <node concept="PrWs8" id="7DbC5OGPlxT" role="PzmwI">
+      <ref role="PrY4T" to="vs0r:65XyadYKJgN" resolve="IIdentifierNamedConcept" />
     </node>
-    <node role="implements" roleId="tpce.1169129564478" type="tpce.InterfaceConceptReference" typeId="tpce.1169127622168" id="8812313417926058410" nodeInfo="ig">
-      <link role="intfc" roleId="tpce.1169127628841" targetNodeId="x27k.6437088627575722831" resolveInfo="IModuleContent" />
+    <node concept="PrWs8" id="7DbC5OGT26E" role="PzmwI">
+      <ref role="PrY4T" to="x27k:5_l8w1EmTdf" resolve="IModuleContent" />
     </node>
-    <node role="implements" roleId="tpce.1169129564478" type="tpce.InterfaceConceptReference" typeId="tpce.1169127622168" id="8812313417926058417" nodeInfo="ig">
-      <link role="intfc" roleId="tpce.1169127628841" targetNodeId="vs0r.1656687801206572012" resolveInfo="IRequiresConfigItem" />
+    <node concept="PrWs8" id="7DbC5OGT26L" role="PzmwI">
+      <ref role="PrY4T" to="vs0r:1rXJcsmD0fG" resolve="IRequiresConfigItem" />
     </node>
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417924468642" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="GPIOFunction" />
-    <property name="abstract" nameId="tpce.4628067390765956802" value="true" />
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="tpck.1133920641626" resolveInfo="BaseConcept" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417924504464" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="RapsberryPiGenerator" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="raspberry pi" />
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="8812313417924468614" resolveInfo="GPIOGeneratorOption" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417924504465" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="EmulationGenerator" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="emulated" />
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="8812313417924468614" resolveInfo="GPIOGeneratorOption" />
-    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="8820081485781645947" nodeInfo="ig">
-      <property name="name" nameId="tpck.1169194664001" value="printChanges" />
-      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983657063" resolveInfo="boolean" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGMXYy">
+    <property role="TrG5h" value="GPIOFunction" />
+    <property role="R5$K7" value="true" />
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="1pbfSe" value="1491632129" />
+    <ref role="1TJDcQ" to="tpck:gw2VY9q" resolve="BaseConcept" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGN6Ig">
+    <property role="TrG5h" value="RapsberryPiGenerator" />
+    <property role="34LRSv" value="raspberry pi" />
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="1pbfSe" value="1491596307" />
+    <ref role="1TJDcQ" node="7DbC5OGMXY6" resolve="GPIOGeneratorOption" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGN6Ih">
+    <property role="TrG5h" value="EmulationGenerator" />
+    <property role="34LRSv" value="emulated" />
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="1pbfSe" value="1491596306" />
+    <ref role="1TJDcQ" node="7DbC5OGMXY6" resolve="GPIOGeneratorOption" />
+    <node concept="1TJgyi" id="7DBem5E0VDV" role="1TKVEl">
+      <property role="TrG5h" value="printChanges" />
+      <ref role="AX2Wp" to="tpck:fKAQMTB" resolve="boolean" />
     </node>
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417924906441" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="NoneFunction" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="none" />
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="8812313417924468642" resolveInfo="GPIOFunction" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417925232425" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="RespberryPiPlantform" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="raspberry pi" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="51wr.5323740605968447022" resolveInfo="DesktopPlatform" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417925236404" nodeInfo="ig">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio" />
-    <property name="name" nameId="tpck.1169194664001" value="GPIORefExpression" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="mj1l.8860443239512128050" resolveInfo="Expression" />
-    <node role="linkDeclaration" roleId="tpce.1071489727083" type="tpce.LinkDeclaration" typeId="tpce.1071489288298" id="8812313417925236405" nodeInfo="ig">
-      <property name="metaClass" nameId="tpce.1071599937831" value="reference" />
-      <property name="role" nameId="tpce.1071599776563" value="gpio" />
-      <property name="sourceCardinality" nameId="tpce.1071599893252" value="1" />
-      <link role="target" roleId="tpce.1071599976176" targetNodeId="8812313417924468621" resolveInfo="GPIO" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGOCR9">
+    <property role="TrG5h" value="NoneFunction" />
+    <property role="34LRSv" value="none" />
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="1pbfSe" value="1491194330" />
+    <ref role="1TJDcQ" node="7DbC5OGMXYy" resolve="GPIOFunction" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGPSsD">
+    <property role="TrG5h" value="RespberryPiPlantform" />
+    <property role="34LRSv" value="raspberry pi" />
+    <property role="1pbfSe" value="1490868346" />
+    <ref role="1TJDcQ" to="51wr:4BxItZJ4BoI" resolve="DesktopPlatform" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGPTqO">
+    <property role="3GE5qa" value="gpio" />
+    <property role="TrG5h" value="GPIORefExpression" />
+    <property role="1pbfSe" value="1490864367" />
+    <ref role="1TJDcQ" to="mj1l:7FQByU3CrCM" resolve="Expression" />
+    <node concept="1TJgyj" id="7DbC5OGPTqP" role="1TKVEi">
+      <property role="20lmBu" value="reference" />
+      <property role="20kJfa" value="gpio" />
+      <property role="20lbJX" value="1" />
+      <ref role="20lvS9" node="7DbC5OGMXYd" resolve="GPIO" />
     </node>
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417925303099" nodeInfo="ig">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <property name="name" nameId="tpck.1169194664001" value="OutputFunction" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="output" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="8812313417924468642" resolveInfo="GPIOFunction" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417925436872" nodeInfo="ig">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio" />
-    <property name="name" nameId="tpck.1169194664001" value="GPIOType" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="gpio" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="mj1l.8860443239512128054" resolveInfo="Type" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417925436998" nodeInfo="ig">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio" />
-    <property name="name" nameId="tpck.1169194664001" value="HighLiteral" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="high" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="8812313417926626062" resolveInfo="GpioLiteral" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417925532771" nodeInfo="ig">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio.config" />
-    <property name="name" nameId="tpck.1169194664001" value="InputFunction" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="input" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="8812313417924468642" resolveInfo="GPIOFunction" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417925532823" nodeInfo="ig">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio" />
-    <property name="name" nameId="tpck.1169194664001" value="LowLiteral" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="low" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="8812313417926626062" resolveInfo="GpioLiteral" />
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417925536026" nodeInfo="ig">
-    <property name="name" nameId="tpck.1169194664001" value="SleepStatement" />
-    <property name="conceptAlias" nameId="tpce.5092175715804935370" value="sleep" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="c4fa.4185783222026464515" resolveInfo="Statement" />
-    <node role="propertyDeclaration" roleId="tpce.1071489727084" type="tpce.PropertyDeclaration" typeId="tpce.1071489288299" id="8812313417925538872" nodeInfo="ig">
-      <property name="name" nameId="tpck.1169194664001" value="millis" />
-      <link role="dataType" roleId="tpce.1082985295845" targetNodeId="tpck.1082983657062" resolveInfo="integer" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGQ9GV">
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="TrG5h" value="OutputFunction" />
+    <property role="34LRSv" value="output" />
+    <property role="1pbfSe" value="1490797672" />
+    <ref role="1TJDcQ" node="7DbC5OGMXYy" resolve="GPIOFunction" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGQEn8">
+    <property role="3GE5qa" value="gpio" />
+    <property role="TrG5h" value="GPIOType" />
+    <property role="34LRSv" value="gpio" />
+    <property role="1pbfSe" value="1490663899" />
+    <ref role="1TJDcQ" to="mj1l:7FQByU3CrCQ" resolve="Type" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGQEp6">
+    <property role="3GE5qa" value="gpio" />
+    <property role="TrG5h" value="HighLiteral" />
+    <property role="34LRSv" value="high" />
+    <property role="1pbfSe" value="1490663773" />
+    <ref role="1TJDcQ" node="7DbC5OGVcGe" resolve="GpioLiteral" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGR1Lz">
+    <property role="3GE5qa" value="gpio.config" />
+    <property role="TrG5h" value="InputFunction" />
+    <property role="34LRSv" value="input" />
+    <property role="1pbfSe" value="1490568000" />
+    <ref role="1TJDcQ" node="7DbC5OGMXYy" resolve="GPIOFunction" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGR1Mn">
+    <property role="3GE5qa" value="gpio" />
+    <property role="TrG5h" value="LowLiteral" />
+    <property role="34LRSv" value="low" />
+    <property role="1pbfSe" value="1490567948" />
+    <ref role="1TJDcQ" node="7DbC5OGVcGe" resolve="GpioLiteral" />
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGR2$q">
+    <property role="TrG5h" value="SleepStatement" />
+    <property role="34LRSv" value="sleep" />
+    <property role="1pbfSe" value="1490564745" />
+    <ref role="1TJDcQ" to="c4fa:3CmSUB7FmO3" resolve="Statement" />
+    <node concept="1TJgyi" id="7DbC5OGR3gS" role="1TKVEl">
+      <property role="TrG5h" value="millis" />
+      <ref role="AX2Wp" to="tpck:fKAQMTA" resolve="integer" />
     </node>
-  </root>
-  <root type="tpce.ConceptDeclaration" typeId="tpce.1071489090640" id="8812313417926626062" nodeInfo="ig">
-    <property name="virtualPackage" nameId="tpck.1193676396447" value="gpio" />
-    <property name="abstract" nameId="tpce.4628067390765956802" value="true" />
-    <property name="name" nameId="tpck.1169194664001" value="GpioLiteral" />
-    <link role="extends" roleId="tpce.1071489389519" targetNodeId="mj1l.8860443239512128090" resolveInfo="Literal" />
-  </root>
+  </node>
+  <node concept="1TIwiD" id="7DbC5OGVcGe">
+    <property role="3GE5qa" value="gpio" />
+    <property role="R5$K7" value="true" />
+    <property role="TrG5h" value="GpioLiteral" />
+    <property role="1pbfSe" value="1489474709" />
+    <ref role="1TJDcQ" to="mj1l:7FQByU3CrDq" resolve="Literal" />
+  </node>
 </model>
 
