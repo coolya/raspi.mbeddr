@@ -48,6 +48,9 @@
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
       </concept>
+      <concept id="1381004262292414836" name="jetbrains.mps.lang.editor.structure.ICellStyle" flags="ng" index="1k5N5V">
+        <reference id="1381004262292426837" name="parentStyleClass" index="1k5W1q" />
+      </concept>
       <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
         <reference id="1140103550593" name="relationDeclaration" index="1NtTu8" />
@@ -245,8 +248,15 @@
     <ref role="1XX52x" to="u7yu:7DbC5OGR2$q" resolve="SleepStatement" />
     <node concept="3EZMnI" id="7DbC5OGR3it" role="2wV5jI">
       <node concept="3F0ifn" id="7DbC5OGR3i$" role="3EZMnx">
-        <property role="3F0ifm" value="sleep(" />
-        <node concept="11LMrY" id="7DbC5OGRf5l" role="3F10Kt">
+        <property role="3F0ifm" value="sleep" />
+        <ref role="1k5W1q" to="r4b4:2CEi94dgHKA" resolve="KW" />
+      </node>
+      <node concept="3F0ifn" id="3lraxJalmxd" role="3EZMnx">
+        <property role="3F0ifm" value="(" />
+        <node concept="11L4FC" id="3lraxJalmzR" role="3F10Kt">
+          <property role="VOm3f" value="true" />
+        </node>
+        <node concept="11LMrY" id="3lraxJalm_d" role="3F10Kt">
           <property role="VOm3f" value="true" />
         </node>
       </node>
@@ -342,6 +352,14 @@
         </node>
         <node concept="2iRkQZ" id="7DBem5E1cUT" role="2iSdaV" />
       </node>
+    </node>
+  </node>
+  <node concept="24kQdi" id="3lraxJall$w">
+    <property role="3GE5qa" value="gpio" />
+    <ref role="1XX52x" to="u7yu:7DbC5OGVcGe" resolve="GpioLiteral" />
+    <node concept="PMmxH" id="3lraxJall$y" role="2wV5jI">
+      <ref role="PMmxG" to="tpco:2wZex4PafBj" resolve="alias" />
+      <ref role="1k5W1q" to="r4b4:2CEi94dgHKA" resolve="KW" />
     </node>
   </node>
 </model>

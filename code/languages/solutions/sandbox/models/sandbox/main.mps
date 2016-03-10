@@ -4,6 +4,7 @@
   <languages>
     <use id="5db9a15e-26c4-4c1d-b417-73ac9a64ae54" name="com.mbeddr.raspi" version="0" />
     <use id="aa7a5f12-2bf0-4efb-ae1d-84ca8cc5a27f" name="com.mbeddr.mqtt" version="0" />
+    <use id="97d24244-51db-4e2e-97fc-7bd73b1f5f40" name="com.mbeddr.ext.components" version="0" />
     <devkit ref="d2a9c55c-6bdc-4cc2-97e1-4ba7552f5584(com.mbeddr.core)" />
   </languages>
   <imports />
@@ -204,7 +205,6 @@
       <property role="TrG5h" value="main" />
       <property role="2OOxQR" value="true" />
       <node concept="3XIRFW" id="7DbC5OGQvhw" role="3XIRFX">
-        <node concept="3XISUE" id="St2wYbF$NV" role="3XIRFZ" />
         <node concept="27v$Wf" id="7XR9GMMJHOY" role="3XIRFZ">
           <node concept="3XIRFW" id="7XR9GMMJHOZ" role="27v$W9">
             <node concept="1_9egQ" id="7XR9GMMJHWp" role="3XIRFZ">

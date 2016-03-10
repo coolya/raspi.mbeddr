@@ -10,6 +10,7 @@
     <import index="tpco" ref="r:00000000-0000-4000-0000-011c89590284(jetbrains.mps.lang.core.editor)" />
     <import index="cl6c" ref="r:890ea833-37c9-445e-a04d-3b69ce24aa30(com.mbeddr.core.modules.editor)" implicit="true" />
     <import index="tpck" ref="r:00000000-0000-4000-0000-011c89590288(jetbrains.mps.lang.core.structure)" implicit="true" />
+    <import index="r4b4" ref="r:1784e088-20fd-4fdb-96b8-bc57f0056d94(com.mbeddr.core.base.editor)" implicit="true" />
   </imports>
   <registry>
     <language id="18bc6592-03a6-4e29-a83a-7ff23bde13ba" name="jetbrains.mps.lang.editor">
@@ -39,6 +40,9 @@
       <concept id="1233759184865" name="jetbrains.mps.lang.editor.structure.PunctuationRightStyleClassItem" flags="ln" index="11LMrY" />
       <concept id="1088013125922" name="jetbrains.mps.lang.editor.structure.CellModel_RefCell" flags="sg" stub="730538219795941030" index="1iCGBv">
         <child id="1088186146602" name="editorComponent" index="1sWHZn" />
+      </concept>
+      <concept id="1381004262292414836" name="jetbrains.mps.lang.editor.structure.ICellStyle" flags="ng" index="1k5N5V">
+        <reference id="1381004262292426837" name="parentStyleClass" index="1k5W1q" />
       </concept>
       <concept id="1088185857835" name="jetbrains.mps.lang.editor.structure.InlineEditorComponent" flags="ig" index="1sVBvm" />
       <concept id="1139848536355" name="jetbrains.mps.lang.editor.structure.CellModel_WithRole" flags="ng" index="1$h60E">
@@ -264,6 +268,7 @@
       <node concept="2iRfu4" id="St2wYbJFhu" role="2iSdaV" />
       <node concept="3F0ifn" id="St2wYbJFh_" role="3EZMnx">
         <property role="3F0ifm" value="publish" />
+        <ref role="1k5W1q" to="r4b4:2CEi94dgHKA" resolve="KW" />
       </node>
       <node concept="1iCGBv" id="St2wYbJFhK" role="3EZMnx">
         <ref role="1NtTu8" to="w8fu:St2wYbJFgj" />
@@ -335,6 +340,7 @@
     <node concept="3EZMnI" id="St2wYbN5kn" role="2wV5jI">
       <node concept="3F0ifn" id="St2wYbN5k$" role="3EZMnx">
         <property role="3F0ifm" value="connect" />
+        <ref role="1k5W1q" to="r4b4:2CEi94dgHKA" resolve="KW" />
       </node>
       <node concept="1iCGBv" id="St2wYbN5kK" role="3EZMnx">
         <ref role="1NtTu8" to="w8fu:St2wYbN5jp" />
@@ -359,12 +365,14 @@
       </node>
       <node concept="3F0ifn" id="St2wYbN5w1" role="3EZMnx">
         <property role="3F0ifm" value="to" />
+        <ref role="1k5W1q" to="r4b4:2CEi94dgHKA" resolve="KW" />
       </node>
       <node concept="3F0A7n" id="St2wYbN5_X" role="3EZMnx">
         <ref role="1NtTu8" to="w8fu:St2wYbN5je" resolve="address" />
       </node>
       <node concept="3F0ifn" id="St2wYbN5FY" role="3EZMnx">
         <property role="3F0ifm" value="as" />
+        <ref role="1k5W1q" to="r4b4:2CEi94dgHKA" resolve="KW" />
       </node>
       <node concept="3F0A7n" id="St2wYbN5Rc" role="3EZMnx">
         <ref role="1NtTu8" to="w8fu:St2wYbN5ji" resolve="clientName" />
@@ -440,6 +448,7 @@
     <node concept="3EZMnI" id="3qdsM6yWban" role="2wV5jI">
       <node concept="3F0ifn" id="3qdsM6yWbao" role="3EZMnx">
         <property role="3F0ifm" value="disconnect" />
+        <ref role="1k5W1q" to="r4b4:2CEi94dgHKA" resolve="KW" />
       </node>
       <node concept="1iCGBv" id="3qdsM6yWbap" role="3EZMnx">
         <ref role="1NtTu8" to="w8fu:3qdsM6yWaVb" />
